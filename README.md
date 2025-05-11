@@ -8,7 +8,7 @@ Tema WordPress diseñado para el sitio web del Hogar Infantil Los Fundadores.
 
 ### Tema
 
-El tema se encuentra en `wp-content/themes/fundadores`. Para obtener más detalles, consulta el archivo [README](wp-content/themes/fundadores/README.md) en esa ubicación.
+El tema como tal se encuentra en `wp-content/themes/fundadores`. Para obtener más detalles, consulta el archivo [README](wp-content/themes/fundadores/README.md) en esa ubicación.
 
 ### Docker
 

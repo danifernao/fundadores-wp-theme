@@ -12,5 +12,5 @@ RUN chmod +x /usr/local/bin/entrypoint.sh
 # Usa el entrypoint personalizado.
 ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
 
-# Asegura que todos los procesos corran como www-data
+# Asegura que todos los procesos corran como www-data.
 USER www-data
