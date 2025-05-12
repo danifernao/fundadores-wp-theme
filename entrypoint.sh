@@ -1,5 +1,8 @@
 #!/bin/bash
+# Indica que el script se debe ejecutar con Bash.
+
 set -e
+# Hace que el script se detenga si ocurre cualquier error.
 
 # Ejecuta el entrypoint original de WordPress.
 docker-entrypoint.sh apache2-foreground &
