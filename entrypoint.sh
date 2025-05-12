@@ -13,7 +13,7 @@ done
 # Instala el idioma Español.
 wp language core install es_CO --allow-root
 
-echo "WordPress ha sido configurado correctamente."
+echo "WordPress está listo en http://localhost:8000/"
 
 # Mantiene el contenedor vivo.
 wait
