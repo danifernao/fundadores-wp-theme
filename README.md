@@ -14,10 +14,10 @@ El tema como tal se encuentra en `wp-content/themes/fundadores`. Para obtener m�
 
 Con Docker puedes visualizar el tema en un entorno de desarrollo configurado para un proyecto demostrativo. Sigue estos pasos:
 
-1. Asegúrate de tener instalado Docker y su servicio en ejecución.
-2. Descarga o clona este repositorio e ingresa a él.
+1. Asegúrate de tener instalados [Node.js](https://nodejs.org/es/download) y npm.
+2. Descarga o clona este repositorio y accede a la carpeta del proyecto.
 3. Renombra el archivo `.env.example` a `.env`.
-4. Abre el terminal y ejecuta lo siguiente para instalar y poner en marcha los contenedores:
+4. Abre la terminal y ejecuta lo siguiente para instalar las dependencias y levantar los contenedores:
 
 ```
 docker compose up
