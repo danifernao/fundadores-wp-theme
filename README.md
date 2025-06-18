@@ -24,8 +24,7 @@ docker compose up
 ```
 
 5. Abre el navegador web y visita la dirección http://localhost:8000 para visualizar el sitio web.
-6. Accede a phpMyAdmin en http://localhost:8001.
-7. Accede a MailHog en http://localhost:8002.
+6. Accede a MailHog en http://localhost:8002.
 
 #### Credenciales
 
