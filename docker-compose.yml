@@ -1,0 +1,38 @@
+services:
+  wordpress:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 8000:80
+    environment:
+      WORDPRESS_DB_HOST: ${WORDPRESS_DB_HOST}
+      WORDPRESS_DB_USER: ${WORDPRESS_DB_USER}
+      WORDPRESS_DB_PASSWORD: ${WORDPRESS_DB_PASSWORD}
+      WORDPRESS_DB_NAME: ${WORDPRESS_DB_NAME}
+    volumes:
+      - ./wp-content/plugins/mailhog-config.php:/var/www/html/wp-content/plugins/mailhog-config.php
+      - ./wp-content/themes/fundadores:/var/www/html/wp-content/themes/fundadores
+      - ./wp-content/uploads:/var/www/html/wp-content/uploads
+    depends_on:
+      - mysql
+  mysql:
+    image: mysql:9.3
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    volumes:
+      - ./db-init:/docker-entrypoint-initdb.d
+  phpmyadmin:
+    image: phpmyadmin
+    ports:
+      - 8001:80
+    environment:
+      - PMA_HOST=mysql
+      - PMA_port=3306
+  mailhog:
+    image: mailhog/mailhog
+    ports:
+      - 8002:8025
